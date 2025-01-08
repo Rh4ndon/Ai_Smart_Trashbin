@@ -1,4 +1,4 @@
-#include <Rhandon.tech-project-1_inferencing.h>  // Edge Impulse library for machine learning model
+#include <ESP32-CAM_inferencing.h>  // Edge Impulse library for machine learning model
 
 // Define camera model for configuration
 #define CAMERA_MODEL_AI_THINKER
