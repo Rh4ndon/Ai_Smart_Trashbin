@@ -106,6 +106,7 @@ void loop() {
     mylcd.Fill_Screen(BLACK);
     
     // Handle plastic bottle detection
+     
     if (result == "plastic_bottle") {
       Serial.println("Condition matched: plastic_bottle");
       mySerial.println("charging"); // Notify ESP32 charging is starting
@@ -132,7 +133,8 @@ void loop() {
       digitalWrite(RELAY_PIN, HIGH);  // Activate charging relay
       relayActive = true;
 
-    } else {
+    } 
+    else {
       // Handle non-plastic bottle detection
       Serial.println("Condition matched: not_plastic_bottle");
       

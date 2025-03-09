@@ -1,4 +1,4 @@
-#include <Rhandon.tech-project-1_inferencing.h>  // Edge Impulse library for machine learning model
+#include <TechnoBin-final_inferencing.h>  // Edge Impulse library for machine learning model
 
 // Define camera model for configuration
 #define CAMERA_MODEL_AI_THINKER
@@ -55,7 +55,7 @@ void setup() {
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;    // 20MHz clock frequency
   config.pixel_format = PIXFORMAT_JPEG;
-  config.frame_size = FRAMESIZE_QVGA;
+  config.frame_size = FRAMESIZE_240X240;
   config.jpeg_quality = 10;          // Lower value = higher quality
   config.fb_count = 1;               // Number of frame buffers
 
@@ -125,6 +125,7 @@ String classify() {
   if (!capture()) return "[ERROR] Capture failed";
 
   Serial.println("[INFO] Image captured. Running classifier...");
+  //Serial1.println("wait");
 
   // Prepare signal for classification
   signal_t signal;
